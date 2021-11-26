@@ -1,5 +1,3 @@
-Uscita
-riavviare
 Elenco dispositivi iwctl 
 ip linkiwctl station wlan0 get-networks
 stazione iwctl scansione wlan0 
