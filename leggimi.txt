@@ -1,0 +1,18 @@
+1)
+echo("decommentare it_IT.UTF-8")
+nano /etc/locale.gen
+
+2)
+nano /etc/vconsole.conf
+echo("KEYMAP=it
+EDITOR=nano")
+
+I desktop 
+GNOME:pacman -S gnome gnome-extra gnome-initial-setup
+KDE PLASMA:pacman -S plasma kde-applications xdg-user-dirs sddm
+LXQT:pacman -S lxqt breeze-icons sddm xdg-user-dirs
+MATE:pacman -S mate mate-extra xdg-user-dirs lightdm lightdm-gtk-greeter")
+Attivare i desktop
+systemctl enable gdm # Per GNOME
+systemctl enable sddm # Per KDE e LXQt
+systemctl enable lightdm # Per MATE")
