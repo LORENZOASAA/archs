@@ -7,7 +7,7 @@ iwctl station wlan0 scan
 iwctl station wlan0 get-networks
 iwctl station wlan0 connect SSID
 fdisk -l
-chdisk /dev/sda
+cfdisk /dev/sda
 mkfs.vfat -F32 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkswap /dev/sda2
