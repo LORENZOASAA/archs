@@ -20,14 +20,11 @@ cat /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel linux linux-firmware nano
 genfstab -U -p /mnt > /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
-echo("decommentare it_IT.UTF-8")
 nano /etc/locale.gen
 locale-gen
 echo LANG=it_IT.UTF-8 > /etc/locale.conf
 export LANG=it_IT.UTF-8
 nano /etc/vconsole.conf
-echo("KEYMAP=it
-EDITOR=nano")
 export EDITOR=nano
 ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
 hwclock --systohc --utc
@@ -51,19 +48,6 @@ reboot
 iwctl device list ip linkiwctl station wlan0 get-networks iwctl station wlan0 scan iwctl station wlan0 connect SSID
 pacman -S alsa-utils
 pacman -S xorg-server xorg-xinit
-echo("
-GNOME
-pacman -S gnome gnome-extra gnome-initial-setup
-KDE Plasma
-pacman -S plasma kde-applications xdg-user-dirs sddm
-LXQt
-pacman -S lxqt breeze-icons sddm xdg-user-dirs
-MATE
-pacman -S mate mate-extra xdg-user-dirs lightdm lightdm-gtk-greeter")
-echo("
-systemctl enable gdm # Per GNOME
-systemctl enable sddm # Per KDE e LXQt
-systemctl enable lightdm # Per MATE")
 pacman -S networkmanager
 systemctl enable NetworkManager
 systemctl disable dhcpcd
