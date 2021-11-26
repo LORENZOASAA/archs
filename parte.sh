@@ -44,13 +44,4 @@ grub-install
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
-reboot
-iwctl device list 
-ip linkiwctl station wlan0 get-networks
-iwctl station wlan0 scan 
-iwctl station wlan0 connect SSID
-pacman -S alsa-utils
-pacman -S xorg-server xorg-xinit
-pacman -S networkmanager
-systemctl enable NetworkManager
-systemctl disable dhcpcd
+
