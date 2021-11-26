@@ -43,5 +43,6 @@ pacman -S os-prober
 grub-install
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+echo"installre i desktop"
 exit
-
+reboot
